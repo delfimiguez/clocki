@@ -38,7 +38,7 @@
                 </svg>
             </div>
             <h1 class='rammetto-one-regular'>Clocki</h1>
-            <p class="subtitle">Coordina reuniones internacionales sin confusiones de horario</p>
+            <p class="subtitle">Convert time zones for your team</p>
         </header>
 
         <!-- Sección 1: Datos de la reunión -->
@@ -52,44 +52,44 @@
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
                 </div>
-                <h2>Datos de la reunión</h2>
+                <h2>Meeting Details</h2>
             </div>
             
             <div class="form-grid">
                 <div class="form-group full-width">
-                    <label for="meetingTitle">Título de la reunión</label>
+                    <label for="meetingTitle">Meeting title</label>
                     <input 
                         type="text" 
                         id="meetingTitle" 
-                        placeholder="Ej: Reunión de planificación Q4"
-                        value="Reunión de planificación Q4"
+                        placeholder="Ej:Planning Q4 Meeting"
+                        value="Planning Q4 Meeting"
                     >
                 </div>
 
                 <div class="form-group">
-                    <label for="meetingDate">Fecha</label>
+                    <label for="meetingDate">Date</label>
                     <input type="date" id="meetingDate">
                 </div>
 
                 <div class="form-group">
-                    <label for="meetingTime">Hora</label>
+                    <label for="meetingTime">Time</label>
                     <input type="time" id="meetingTime" value="15:00">
                 </div>
 
                 <div class="form-group">
-                    <label for="baseTimezone">Tu Zona Horaria</label>
+                    <label for="baseTimezone">Your Time Zone</label>
                     <select id="baseTimezone">
                         <optgroup label="Europa">
                             <option value="Europe/Madrid" selected>Madrid</option>
-                            <option value="Europe/London">Londres</option>
-                            <option value="Europe/Paris">París</option>
-                            <option value="Europe/Berlin">Berlín</option>
-                            <option value="Europe/Rome">Roma</option>
-                            <option value="Europe/Lisbon">Lisboa</option>
+                            <option value="Europe/London">London</option>
+                            <option value="Europe/Paris">Paris</option>
+                            <option value="Europe/Berlin">Berlin</option>
+                            <option value="Europe/Rome">Rome</option>
+                            <option value="Europe/Lisbon">Lisbon</option>
                         </optgroup>
                         <optgroup label="América">
-                            <option value="America/New_York">Nueva York</option>
-                            <option value="America/Los_Angeles">Los Ángeles</option>
+                            <option value="America/New_York">New York</option>
+                            <option value="America/Los_Angeles">Los Angeles</option>
                             <option value="America/Chicago">Chicago</option>
                             <option value="America/Mexico_City">Ciudad de México</option>
                             <option value="America/Buenos_Aires">Buenos Aires</option>
@@ -114,10 +114,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="language">Idioma del mensaje</label>
+                    <label for="language">Text Language</label>
                     <select id="language">
-                        <option value="es" selected>Español</option>
-                        <option value="en">Inglés</option>
+                        <option value="es" selected>Spanish</option>
+                        <option value="en">English</option>
                     </select>
                 </div>
             </div>
@@ -134,33 +134,33 @@
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                     </svg>
                 </div>
-                <h2>Participantes</h2>
+                <h2>Participants</h2>
             </div>
             
             <div class="add-participant-form">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="participantName">Nombre o etiqueta</label>
+                        <label for="participantName">Name or tag</label>
                         <input 
                             type="text" 
                             id="participantName" 
-                            placeholder="Ej: Equipo Buenos Aires"
+                            placeholder="Ej: Buenos Aires Team"
                         >
                     </div>
 
                     <div class="form-group">
-                        <label for="participantTimezone">Zona horaria del participante</label>
+                        <label for="participantTimezone">Participant Time Zone</label>
                         <select id="participantTimezone">
                             <optgroup label="Europa">
                                 <option value="Europe/Madrid">Madrid</option>
-                                <option value="Europe/London">Londres</option>
-                                <option value="Europe/Paris">París</option>
-                                <option value="Europe/Berlin">Berlín</option>
-                                <option value="Europe/Rome">Roma</option>
-                                <option value="Europe/Lisbon">Lisboa</option>
+                                <option value="Europe/London">London</option>
+                                <option value="Europe/Paris">Paris</option>
+                                <option value="Europe/Berlin">Berlin</option>
+                                <option value="Europe/Rome">Rome</option>
+                                <option value="Europe/Lisbon">Lisbon</option>
                             </optgroup>
                             <optgroup label="América">
-                                <option value="America/New_York">Nueva York</option>
+                                <option value="America/New_York">New York</option>
                                 <option value="America/Los_Angeles">Los Ángeles</option>
                                 <option value="America/Chicago">Chicago</option>
                                 <option value="America/Mexico_City">Ciudad de México</option>
@@ -192,7 +192,7 @@
                                 <line x1="12" y1="5" x2="12" y2="19"></line>
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
-                            Agregar
+                            Add
                         </button>
                     </div>
                 </div>
@@ -212,7 +212,7 @@
                         <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
                 </div>
-                <h2>Horarios convertidos</h2>
+                <h2>Converted times/h2>
             </div>
             
             <button type="button" class="btn btn-primary" id="calculateBtn">
@@ -220,7 +220,7 @@
                     <polyline points="23 4 23 10 17 10"></polyline>
                     <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
                 </svg>
-                Calcular horarios
+                Calculate times
             </button>
 
             <div id="errorMessage" class="error-message" style="display: none;"></div>
@@ -239,7 +239,7 @@
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
                 </div>
-                <h2>Mensaje de invitación</h2>
+                <h2>Invitation message</h2>
             </div>
             
             <button type="button" class="btn btn-primary" id="generateMessageBtn">
@@ -248,12 +248,12 @@
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
-                Generar mensaje de invitación
+                Generate Invitation Message
             </button>
 
             <div id="messageSection" class="message-section" style="display: none;">
                 <div class="message-preview">
-                    <label for="generatedMessage">Mensaje generado (listo para copiar):</label>
+                    <label for="generatedMessage">Message Generated (ready to copy):</label>
                     <textarea id="generatedMessage" readonly></textarea>
                 </div>
 
@@ -262,14 +262,14 @@
                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                     </svg>
-                    Copiar mensaje
+                    Copy text
                 </button>
 
                 <div id="copySuccess" class="success-message" style="display: none;">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    Mensaje copiado al portapapeles
+                    Coppied Text
                 </div>
             </div>
         </section>
