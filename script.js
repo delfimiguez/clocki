@@ -53,7 +53,7 @@ function addParticipant() {
     
     // Validación
     if (!name) {
-        showError('Por favor, ingresa un nombre para el participante');
+        showError('Please, add a name for the participant');
         return;
     }
     
@@ -142,17 +142,17 @@ function calculateTimezones() {
     const baseTimezone = document.getElementById('baseTimezone').value;
     
     if (!title) {
-        showError('Por favor, ingresa un título para la reunión');
+        showError('Please, add a heading title');
         return;
     }
     
     if (!date || !time) {
-        showError('Por favor, selecciona una fecha y hora para la reunión');
+        showError('Please fill in the date, time, and base time zone.');
         return;
     }
     
     if (participants.length === 0) {
-        showError('Por favor, agrega al menos un participante antes de calcular los horarios');
+        showError('Please add at least one participant.');
         return;
     }
     
