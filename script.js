@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('meetingDate').value = dateString;
 
     // Agregar participantes de ejemplo
-    addParticipantToList('Equipo Buenos Aires', 'America/Buenos_Aires');
-    addParticipantToList('Equipo New York', 'America/New_York');
+    addParticipantToList('Buenos Aires Team', 'America/Buenos_Aires');
+    addParticipantToList('New York Team', 'America/New_York');
 
     // Event listeners para los botones
     document.getElementById('addParticipantBtn').addEventListener('click', addParticipant);
@@ -163,7 +163,7 @@ function calculateTimezones() {
     
     // Verificar que la fecha sea válida
     if (!baseDateTime.isValid) {
-        showError('La fecha y hora seleccionadas no son válidas');
+        showError('The selected time and date are invalid');
         return;
     }
     
@@ -177,7 +177,7 @@ function calculateTimezones() {
             timezone: participant.timezone,
             cityName: getCityName(participant.timezone),
             dateTime: participantDateTime,
-            formatted: formatDateTime(participantDateTime, 'es') // Siempre en español para la tabla
+            formatted: formatDateTime(participantDateTime, 'en') // Siempre en español para la tabla
         };
     });
     
@@ -196,14 +196,14 @@ function renderTimezoneResults(conversions, baseDateTime, baseTimezone) {
     // Renderizar como tabla (para desktop)
     const tableHTML = `
         <h3>
-            📍 Hora base: <strong>${baseFormatted}</strong> (${baseCityName})
+            📍 Base Time: <strong>${baseFormatted}</strong> (${baseCityName})
         </h3>
         <table class="timezone-table">
             <thead>
                 <tr>
-                    <th>Participante</th>
-                    <th>Ubicación</th>
-                    <th>Hora local</th>
+                    <th>Participants</th>
+                    <th>Location</th>
+                    <th>Local Time</th>
                 </tr>
             </thead>
             <tbody>
@@ -259,17 +259,17 @@ function generateMessage() {
     const language = document.getElementById('language').value;
     
     if (!title) {
-        showError('Por favor, ingresa un título para la reunión');
+        showError('Please, add a meeting title');
         return;
     }
     
     if (!date || !time) {
-        showError('Por favor, selecciona una fecha y hora para la reunión');
+        showError('Please, add a date and time for the meeting');
         return;
     }
     
     if (participants.length === 0) {
-        showError('Por favor, agrega al menos un participante antes de generar el mensaje');
+        showError('Please, add at least one participant');
         return;
     }
     
@@ -279,7 +279,7 @@ function generateMessage() {
     const baseDateTime = DateTime.fromISO(`${date}T${time}`, { zone: baseTimezone });
     
     if (!baseDateTime.isValid) {
-        showError('La fecha y hora seleccionadas no son válidas');
+        showError('The selected date and time are invalid');
         return;
     }
     
