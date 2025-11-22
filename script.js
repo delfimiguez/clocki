@@ -120,7 +120,7 @@ function renderParticipants() {
                     class="btn btn-danger" 
                     onclick="removeParticipant(${participant.id})"
                 >
-                    Eliminar
+                    Delete
                 </button>
             </div>
         `;
