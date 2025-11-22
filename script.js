@@ -191,7 +191,7 @@ function calculateTimezones() {
 function renderTimezoneResults(conversions, baseDateTime, baseTimezone) {
     const container = document.getElementById('timezoneResults');
     const baseCityName = getCityName(baseTimezone);
-    const baseFormatted = formatDateTime(baseDateTime, 'es');
+    const baseFormatted = formatDateTime(baseDateTime, 'en');
     
     // Renderizar como tabla (para desktop)
     const tableHTML = `
